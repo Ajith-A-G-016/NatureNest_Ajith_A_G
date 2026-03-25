@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">NatureNest 🌿</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html" class="cart-link">Cart <span id="cart-badge" class="badge" style="display: none;">0</span></a></li>
+            <li><a id="auth-nav-link" style="cursor: pointer;"></a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="login-box">
+            <h2 id="login-title" style="margin-bottom: 2rem; color: var(--text-dark); text-align: center; font-size: 2.2rem; font-weight: 800;">Welcome Back</h2>
+            <div style="display: flex; gap: 15px; margin-bottom: 2rem; background: #f1f5f9; padding: 5px; border-radius: 99px;">
+                <button type="button" id="btn-farmer" class="btn-role btn-green" style="margin-top: 0; padding: 0.8rem; flex: 1; box-shadow: none; border-radius: 99px;" onclick="setRole('farmer')">Farmer</button>
+                <button type="button" id="btn-customer" class="btn-role btn-outline" style="margin-top: 0; padding: 0.8rem; flex: 1; border: none; background: transparent; color: var(--text-gray); border-radius: 99px;" onclick="setRole('customer')">Customer</button>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label>Email ID</label>
+                    <input type="email" id="login-email" required placeholder="name@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn-role btn-green" style="padding: 1.2rem; font-size: 1.1rem; margin-top: 1rem; border-radius: 99px; width: 100%;">Secure Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: var(--text-gray);">
+                Don't have an account? <a href="signup.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">Sign up free</a>
+            </p>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

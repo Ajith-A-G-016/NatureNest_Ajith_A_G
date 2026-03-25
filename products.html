@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest - Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">NatureNest 🌿</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" style="color: var(--primary);">Products</a></li>
+            <li><a href="cart.html" class="cart-link">Cart <span id="cart-badge" class="badge" style="display: none;">0</span></a></li>
+            <li><a id="auth-nav-link" style="cursor: pointer;"></a></li>
+        </ul>
+    </header>
+    <section>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="font-size: 3rem; color: var(--text-dark); font-weight: 800;">Fresh Market 🌾</h2>
+            <p style="color: var(--text-gray); font-size: 1.2rem; margin-top: 0.5rem;">Directly from our farms to your table.</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="🔍 Search for tomatoes, apples, carrots..." onkeyup="filterMarket()">
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

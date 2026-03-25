@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest - Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">NatureNest 🌿</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html" class="cart-link" style="color: var(--primary);">Cart <span id="cart-badge" class="badge" style="display: none;">0</span></a></li>
+            <li><a id="auth-nav-link" style="cursor: pointer;"></a></li>
+        </ul>
+    </header>
+    <section class="cart-container">
+        <h2 style="font-size: 2.5rem; color: var(--text-dark); font-weight: 800; text-align: center; margin-bottom: 3rem;">Your Cart 🛒</h2>
+        <div id="empty-cart-msg" style="text-align: center; padding: 4rem 0; background: var(--white); border-radius: 24px; box-shadow: var(--shadow-sm); display: none;">
+            <div style="font-size: 5rem; margin-bottom: 1rem; opacity: 0.5;">🛒</div>
+            <h3 style="color: var(--text-dark); font-size: 1.8rem;">Your Cart is Empty</h3>
+            <p style="color: var(--text-gray); margin-top: 0.5rem; margin-bottom: 2rem; font-size: 1.1rem;">Looks like you haven't added any fresh produce yet.</p>
+            <a href="products.html" class="btn-role btn-green" style="display: inline-block; width: auto; padding: 1rem 2.5rem; font-size: 1.1rem; border-radius: 99px;">Browse Market</a>
+        </div>
+        <div id="cart-items-container"></div>
+        <div id="cart-total-section" class="cart-total-section" style="display: none;">
+            <h3 style="font-size: 1.4rem; color: var(--text-gray);">Total Amount: <strong style="color: var(--primary); font-size: 2.5rem; margin-left: 10px;">₹<span id="cart-total">0</span></strong></h3>
+            <button class="btn-role btn-green" style="display: inline-block; width: auto; padding: 1.2rem 3rem; font-size: 1.1rem; margin-top: 1rem; border-radius: 99px;" onclick="window.location.href='checkout.html'">Proceed to Checkout →</button>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

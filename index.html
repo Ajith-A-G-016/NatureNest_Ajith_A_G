@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest - Fresh & Fair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">NatureNest 🌿</a>
+        <ul class="nav-links">
+            <li><a href="index.html" style="color: var(--primary);">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html" class="cart-link">Cart <span id="cart-badge" class="badge" style="display: none;">0</span></a></li>
+            <li><a id="auth-nav-link" style="cursor: pointer;"></a></li>
+        </ul>
+    </header>
+    <section style="padding-top: 2rem;">
+        <div class="hero-wrapper">
+            <h1>Fresh Harvest,<br><span class="gradient-text">Fair Prices.</span></h1>
+            <p>Connecting hardworking farmers directly with customers. No middlemen, just pure, fresh produce delivered straight to your doorstep.</p>
+            <div style="display: flex; gap: 1.5rem; margin-top: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btn-role btn-green" onclick="window.location.href='products.html'">Shop Fresh Produce</button>
+                <button class="btn-role btn-white" style="color: var(--primary-dark);" onclick="openSignup('farmer')">Sell on NatureNest</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="font-size: 2.5rem; color: var(--text-dark); font-weight: 800;">How It Works</h2>
+            <p style="color: var(--text-gray); font-size: 1.1rem;">From the soil to your table in three simple steps.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="feature-icon">🚜</span>
+                <h3>1. Farm Harvested</h3>
+                <p>Local farmers list their freshly picked produce on our platform daily.</p>
+            </div>
+            <div class="feature-box">
+                <span class="feature-icon">🛒</span>
+                <h3>2. Direct Ordering</h3>
+                <p>Customers browse the market and buy directly from the source.</p>
+            </div>
+            <div class="feature-box">
+                <span class="feature-icon">🚚</span>
+                <h3>3. Fast Delivery</h3>
+                <p>Orders are packed securely and delivered to your doorstep in 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="category-banner">
+            <h2 style="text-align: center;">Grow With NatureNest</h2>
+            <p style="text-align: center; max-width: 600px; margin-bottom: 3rem;">Whether you are looking to feed your family with healthy, farm-fresh produce or you are a farmer wanting fair prices for your hard work, we have a place for you.</p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+                <div style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">For Customers 🛒</h3>
+                    <p style="margin-bottom: 2rem; line-height: 1.6; color: #cbd5e1; font-size: 1.05rem;">Join us to help the farmers who feed us. Get farm-fresh, healthy vegetables and fruits delivered right to your door.</p>
+                    <button class="btn-role btn-white" style="width: auto; padding: 0.8rem 2.5rem;" onclick="openSignup('customer')">Sign Up as Customer</button>
+                </div>
+                <div style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">For Farmers 🚜</h3>
+                    <p style="margin-bottom: 2rem; line-height: 1.6; color: #cbd5e1; font-size: 1.05rem;">Take control of your harvest. Sell your products directly at a fair price with zero hidden commission fees.</p>
+                    <button class="btn-role btn-green" style="width: auto; padding: 0.8rem 2.5rem;" onclick="openSignup('farmer')">Sign Up as Farmer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About NatureNest 🌿</h3>
+                <p>NatureNest was born from a simple idea: <strong>Food should be fair.</strong></p>
+                <p>We connect the hands that grow the food directly to the families that eat it, eliminating middlemen to ensure transparency.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us 📞</h3>
+                <p>We are here to support you 24/7.</p>
+                <p>📧 support@naturenest.in</p>
+                <p>📞 +91 94493 64062</p>
+                <p>📍 Mambakkam, Tamil Nadu, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Experience the Farm</h3>
+                <div class="footer-media">
+                    <video controls><source src="Plant.mp4" type="video/mp4"></video>
+                    <p style="font-size: 0.9rem; margin-top: 10px; margin-bottom: 15px; color: #cbd5e1;">Listen to our farm ambience:</p>
+                    <audio controls><source src="Breeze.mp3" type="audio/mpeg"></audio>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 NatureNest. All rights reserved.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureNest - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">NatureNest 🌿</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Market</a></li>
+            <li><a id="auth-nav-link" style="cursor: pointer;"></a></li>
+        </ul>
+    </header>
+    <section>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <p style="color: var(--text-gray); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Dashboard</p>
+            <h2 style="font-size: 3rem; font-weight: 800; color: var(--text-dark);">Welcome, <span id="farmer-name" style="color: var(--primary);">Farmer</span>! 🌾</h2>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 4rem;">
+            <div class="role-card" style="padding: 2.5rem 1.5rem; width: 260px;">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">💰</div>
+                <h3 style="font-size: 1.3rem; color: var(--text-dark);">0% Commission</h3>
+                <p style="color: var(--text-gray); font-size: 1rem; margin-top: 0.5rem;">Keep everything you earn.</p>
+            </div>
+            <div class="role-card" style="padding: 2.5rem 1.5rem; width: 260px;">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">🤝</div>
+                <h3 style="font-size: 1.3rem; color: var(--text-dark);">Direct Connect</h3>
+                <p style="color: var(--text-gray); font-size: 1rem; margin-top: 0.5rem;">Sell directly to families.</p>
+            </div>
+            <div class="role-card" style="padding: 2.5rem 1.5rem; width: 260px;">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">📈</div>
+                <h3 style="font-size: 1.3rem; color: var(--text-dark);">Instant Payouts</h3>
+                <p style="color: var(--text-gray); font-size: 1rem; margin-top: 0.5rem;">Get paid on delivery.</p>
+            </div>
+        </div>
+        <div class="add-product-container">
+            <h2 style="color: var(--text-dark); margin-bottom: 0.5rem; text-align: center; font-size: 2.2rem; font-weight: 800;">List New Produce</h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 2.5rem; font-size: 1.1rem;">Add your fresh harvest to the live market.</p>
+            <form onsubmit="handleAddProduct(event)">
+                <div class="input-group">
+                    <label>Produce Name</label>
+                    <input type="text" id="product-name" required placeholder="e.g., Fresh Organic Tomatoes">
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select id="product-category" required style="cursor: pointer;">
+                            <option>Vegetables</option>
+                            <option>Fruits</option>
+                            <option>Grains</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Unit Type</label>
+                        <select id="product-unit" required style="cursor: pointer;">
+                            <option>Per Kg</option>
+                            <option>Per Dozen</option>
+                            <option>Per Piece</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Selling Price (₹)</label>
+                        <input type="number" id="product-price" required placeholder="40">
+                    </div>
+                    <div class="input-group">
+                        <label>Available Stock</label>
+                        <input type="number" id="product-stock" required placeholder="100">
+                    </div>
+                </div>
+                <div class="input-group" style="margin-top: 1rem;">
+                    <label>Produce Image (Optional)</label>
+                    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                        <div id="uploadText">
+                            <span style="font-size: 3rem; color: var(--primary);">📸</span><br>
+                            <span style="color: var(--text-dark); font-weight: 600; font-size: 1.1rem; display: block; margin-top: 10px;">Click to upload photo</span>
+                            <span style="color: var(--text-gray); font-size: 0.9rem;">or drag and drop</span>
+                        </div>
+                        <img id="imagePreview" class="preview-img" alt="Product preview">
+                        <input type="file" id="fileInput" hidden onchange="showPreview(this)" accept="image/*">
+                    </div>
+                </div>
+                <button type="submit" class="btn-role btn-green" style="margin-top: 2rem; padding: 1.2rem; font-size: 1.1rem; border-radius: 99px; width: 100%;">Publish to Market 🚀</button>
+            </form>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
