@@ -56,29 +56,34 @@ To run this project locally on your machine, follow these steps:
    ```bash
    git clone [https://github.com/yourusername/NatureNest.git](https://github.com/yourusername/NatureNest.git)
 
+## 📁 Project Structure
+
+Here is the complete directory structure for the NatureNest application:
+
+```text
 NatureNest_Ajith_A_G/
 │
 ├── naturenest.sql         # Database structure and default data dump
 ├── README.md              # Project documentation
 │
 ├── api_add_product.php    # Handles product creation & image uploads
+├── api_check_auth.php     # Validates active sessions and tracking cookies
 ├── api_checkout.php       # Processes orders and logs confirmation emails
 ├── api_edit_product.php   # Handles price/stock updates for farmers
 ├── api_get_products.php   # Fetches live market data from MySQL
 ├── api_login.php          # Handles user authentication & sessions
-├── api_signup.php         # Handles registration & validation
-├── api_check_auth.php     # Validates active sessions and tracking cookies
 ├── api_logout.php         # Destroys sessions and clears cookies securely
+├── api_signup.php         # Handles registration & validation
 ├── db.php                 # MySQL database connection configuration
 │
-├── index.html             # Landing Page
 ├── cart.html              # User Shopping Cart
 ├── checkout.html          # Order Processing UI
 ├── farmer.html            # Farmer Dashboard
+├── index.html             # Landing Page
 ├── login.html             # Login UI
 ├── products.html          # Live Market UI
 ├── signup.html            # Registration UI
 │
-├── style.css              # Global styling & animations
 ├── script.js              # Global jQuery/AJAX logic
+├── style.css              # Global styling & animations
 └── uploads/               # Directory for storing farmer image uploads
